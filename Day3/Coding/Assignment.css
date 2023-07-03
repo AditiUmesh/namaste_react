@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    background-color: bisque; 
+  }
+.left {
+    margin-left: 40px;
+}
+.left img {
+    width: 50px;
+}
+
+.middle input {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.middle button {
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.right{
+    margin-right: 40px;
+}
+
+.right img {
+    width: 50px;
+}
