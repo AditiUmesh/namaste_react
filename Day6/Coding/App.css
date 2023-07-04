@@ -48,6 +48,7 @@
 }
 
 .restro-container{
+    margin: 24px;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
@@ -55,13 +56,12 @@
 
 .restro-card {
     padding: 20px;
-    margin: 20px;
-    width: 180px;
-    background-color: rgb(245, 233, 245);
+    margin: 10px;
+    width: 255px;
 }
 
 .restro-card:hover {
-    border: 1px solid burlywood;
+    border: 1px solid #c7c8cf;
     cursor: pointer;
 }
 .restro-card img{
@@ -103,4 +103,43 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.restroDetails{
+    margin-top: 10px;
+}
+
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.rname {
+    font-size: 17px;
+}
+.greenstar{
+    background-color: #48c479;
+    color: #fff;
+    padding: 3px 5px;
+    font-size: 12px;
+}
+
+.redstar{
+    background-color: #cc5c5c;
+    color: #fff;
+    padding: 3px 5px;
+    font-size: 12px;
+}
+
+.cuisines{
+    color: #686b78;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.desc{
+    color: #686b78;
+    font-size: 13px;
 }

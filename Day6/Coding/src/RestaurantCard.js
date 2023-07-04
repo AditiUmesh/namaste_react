@@ -13,11 +13,18 @@ const RestaurantCard = (props) => {
   return (
     <div className="restro-card">
       <img src={`${FOODITEMSURL}/${cloudinaryImageId}`} alt="food-image"></img>
-      <h3>{name}</h3>
-      <p>{cuisines.join(", ")}</p>
-      <h5>{avgRating}</h5>
-      <h5>{costForTwoString}</h5>
-      <h5>{deliveryTime}</h5>
+      <div className="restroDetails">
+        <div className="rname">{name}</div>
+        <div className="cuisines">{cuisines.join(", ")}</div>
+      </div>
+      <div className="description">
+        <span className={avgRating >= 4 ? "greenstar" : "redstar"}>
+          <i class="fa fa-star"></i>
+          {avgRating}
+        </span>
+        <div className="desc">{costForTwoString}</div>
+        <div className="desc">{deliveryTime} mins</div>
+      </div>
     </div>
   );
 };
