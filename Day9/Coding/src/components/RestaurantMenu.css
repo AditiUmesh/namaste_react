@@ -3,7 +3,22 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin: 0 16px;
+    margin: 0 0 18px;
+    padding-bottom:15px;
+    border-bottom: 1px dotted #7e808c;
+}
+.restro-menu{
+    margin:25px 270px;
+    padding:0;
+    display:block;
+ }
+
+.p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 .name{
@@ -11,5 +26,118 @@
     font-weight: 600;
     color: #282828;
     text-transform: capitalize;
+    margin: 0 0 8px;
 }
 
+.restro-name-address-wrapper {
+    display: inline-block;
+    margin-right: 16px;
+    width:600px;
+}
+
+.cuisine{
+    font-size: .93rem;
+    color: #7e808c;
+    height: calc(0.93rem + 2px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+    margin: 0px;
+    white-space: nowrap;
+}
+
+.locality{
+    color: #7e808c;
+    height: 16px;
+    margin: 0;
+}
+.rating{
+    border: 1px solid #e9e9eb;
+    box-shadow: 0 1px 5px #f9f9f9;
+    border-radius: 6px;
+    text-align: center;
+    padding: 8px;
+    max-width: 100px;
+    float: right;
+}
+
+.avg-rating{
+color: #3d9b6d;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9e9eb;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.total-rating{
+font-size: 11px;
+    color: #8b8d97;
+}
+
+.menu-list{
+    margin:4px;
+}
+
+.recommended{
+    font-weight: bold;
+    font-size:large;
+}
+
+.menu-list > div{
+      list-style-type: none;
+}
+.restro-menu-items{
+    margin-top:20px;
+    padding-bottom: 15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom: 1px solid #7e808c;
+}
+
+.restro-item-name{
+    margin-right: 4px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #3e4152;
+    word-break: break-word;
+    padding-bottom: 10px;
+}
+
+.restro-item-amount{
+    font-weight: 400;
+    color: #3e4152;
+    font-size: 12px;
+    padding:3px 0 10px;
+}
+
+.rupee::before{
+    content: "\20B9";
+    margin-right: 0.1rem;
+    font-size: 12px ;
+}
+
+.restro-menu-desc{
+    font-size:12px;
+    color: #7e808c;
+    padding-bottom:2px;
+}
+
+
+
+button{
+    border:none;
+    background-color: rgba(40,44,63,.05);
+    background-blend-mode: overlay;
+    padding:0;
+    cursor:pointer;
+}
+
+.styles_itemImage {
+    width: 118px;
+    height: 96px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 6px;
+}

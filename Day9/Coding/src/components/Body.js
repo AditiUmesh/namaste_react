@@ -15,10 +15,14 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(FOODAPPURL);
-    const json = await data.json();
-    setListOfRestro(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestro(json?.data?.cards[2]?.data?.data?.cards);
+    try {
+      const data = await fetch(FOODAPPURL);
+      const json = await data.json();
+      setListOfRestro(json?.data?.cards[2]?.data?.data?.cards);
+      setFilteredRestro(json?.data?.cards[2]?.data?.data?.cards);
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   // conditional rendering

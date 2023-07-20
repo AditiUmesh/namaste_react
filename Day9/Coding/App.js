@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./App.css";
 import Header from "./src/components/Header";
@@ -9,11 +9,13 @@ import {
   useRouteError,
   Outlet,
 } from "react-router-dom";
-import AboutUs from "./src/components/AboutUs";
+// import AboutUs from "./src/components/AboutUs";
 import Error from "./src/components/Error";
 import Contact from "./src/components/Contact";
 import RestaurantMenu from "./src/components/RestaurantMenu";
 import useOnlineStatus from "./utils/useOnlineSatus";
+
+const AboutUs = lazy(() => import("./src/components/AboutUs"));
 
 const FoodApp = () => {
   const onlineStatus = useOnlineStatus();
@@ -42,7 +44,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <AboutUs />,
+        element: (
+          <Suspense fallback={<h1>Loading..</h1>}>
+            <AboutUs />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
