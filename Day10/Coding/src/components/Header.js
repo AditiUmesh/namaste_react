@@ -8,11 +8,11 @@ const Header = () => {
   console.log("header rendered");
   return (
     <div className="flex justify-between border border-solid shadow-xl">
-      <div className="p-3">
+      <div className="ml-6 p-3">
         <img className="w-16" src={foodLogo}></img>
       </div>
       <div>
-        <ul className="flex p-4 text-center">
+        <ul className="flex p-4 mr-6 text-center">
           <li className="p-2.5 m-2.5">
             <Link to="/">Home</Link>
           </li>
