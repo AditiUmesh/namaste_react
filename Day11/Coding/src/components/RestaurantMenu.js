@@ -3,23 +3,21 @@ import { useParams } from "react-router-dom";
 import useResMenu from "../../utils/useResMenu";
 
 import RestaurantCategory from "./RestaurantCategory";
+import { useState } from "react";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
-  console.log(resId);
+  const [showIndex, setShowIndex] = useState(0);
+  // console.log(resId);
   const resInfo = useResMenu(resId);
 
-  console.log(resInfo);
+  // console.log(resInfo);
   if (resInfo === null) {
     return <Shimmer />;
   }
 
   const { name, cuisines, locality, avgRating, totalRatingsString } =
     resInfo?.cards[0]?.card?.card?.info;
-
-  //     return (resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card)
-
-  // console.log(itemCards);
 
   const restroCategory =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
@@ -31,7 +29,7 @@ const RestaurantMenu = () => {
 
   return (
     <div className="mx-[270px] my-[25px] pt-2">
-      <div className="flex flex-wrap justify-between justify-items-center mx-5 pb-4 border-b-[1px] border-dashed border-[#7e808c]">
+      <div className="flex flex-wrap justify-between justify-items-center mx-5 mb-5 pb-4 border-b-[1px] border-dashed border-[#7e808c]">
         <div className="restro-heading">
           <div className="inline-block mr-4 w-[600px]">
             <p className="font-serif font-semibold text-3xl text-[#282828] capitalize mb-2">
@@ -52,8 +50,17 @@ const RestaurantMenu = () => {
         </div>
       </div>
       <div>
-        {restroCategory.map((category) => (
-          <RestaurantCategory itemInfo={category} />
+        {restroCategory.map((category, index) => (
+          <RestaurantCategory
+            data={category}
+            key={category.card.card.title}
+            items={index === showIndex ? true : false}
+            setShowIndex={() => {
+              if (index !== showIndex) {
+                setShowIndex(index);
+              }
+            }}
+          />
         ))}
       </div>
     </div>

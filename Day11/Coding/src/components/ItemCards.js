@@ -30,6 +30,11 @@ const ItemCards = (props) => {
                 src={`${FOOD_IMAGE}${items.card.info.imageId}`}
                 alt="food-image"
               ></img>
+              <div className="position:absolute translate-y-[-50%]">
+                <div className="border border-gray text-green-500 rounded bg-white text-[12px] font-bold px-[6px] pt-2 pb-3 mx-3 z-10 position:relative">
+                  ADD
+                </div>
+              </div>
             </button>
           </div>
         </div>

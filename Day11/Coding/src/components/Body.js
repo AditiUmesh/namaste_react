@@ -29,8 +29,8 @@ const Body = () => {
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-  console.log(listOfRestro);
-  console.log(filteredRestro);
+  // console.log(listOfRestro);
+  // console.log(filteredRestro);
 
   // conditional rendering
   // if (listOfRestro.length === 0) {
@@ -39,7 +39,7 @@ const Body = () => {
   const handleSearchRestro = () => {
     if (searchText === "") return setFilteredRestro(listOfRestro);
     const searchRestro = listOfRestro.filter((restro) =>
-      restro.data.name.toLowerCase().includes(searchText.toLowerCase())
+      restro.info.name.toLowerCase().includes(searchText.toLowerCase())
     );
     console.log(searchRestro);
     setFilteredRestro(searchRestro);
