@@ -17,8 +17,12 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch(FOODAPPRL);
     const json = await data.json();
-    setListOfRestro(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestro(json?.data?.cards[2]?.data?.data?.cards);
+    setListOfRestro(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredRestro(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
   console.log(filteredRestro);
 
@@ -29,7 +33,7 @@ const Body = () => {
   const handleSearchRestro = () => {
     if (searchText === "") return setFilteredRestro(listOfRestro);
     const searchRestro = listOfRestro.filter((restro) =>
-      restro.data.name.toLowerCase().includes(searchText.toLowerCase())
+      restro.info.name.toLowerCase().includes(searchText.toLowerCase())
     );
     console.log(searchRestro);
     setFilteredRestro(searchRestro);
@@ -66,7 +70,7 @@ const Body = () => {
             onClick={() => {
               console.log("button clicked");
               filteredList = listOfRestro.filter(
-                (listOfRestro) => listOfRestro.data.avgRating > 4
+                (listOfRestro) => listOfRestro.info.avgRating > 4
               );
               console.log(filteredList);
               setFilteredRestro(filteredList);
@@ -80,7 +84,7 @@ const Body = () => {
             onClick={() => {
               console.log("button clicked");
               filteredList = listOfRestro.filter(
-                (listOfRestro) => listOfRestro.data.veg === true
+                (listOfRestro) => listOfRestro.info.veg === true
               );
               console.log(filteredList);
               setFilteredRestro(filteredList);
@@ -94,7 +98,7 @@ const Body = () => {
             onClick={() => {
               console.log("button clicked");
               filteredList = listOfRestro.filter(
-                (listOfRestro) => listOfRestro.data.veg === false
+                (listOfRestro) => listOfRestro.info.veg === false
               );
               console.log(filteredList);
               setFilteredRestro(filteredList);
@@ -107,7 +111,7 @@ const Body = () => {
             onClick={() => {
               console.log("button clicked");
               filteredList = listOfRestro.filter(
-                (listOfRestro) => listOfRestro.data.deliveryTime < 30
+                (listOfRestro) => listOfRestro.info.deliveryTime < 30
               );
               console.log(filteredList);
               setFilteredRestro(filteredList);
@@ -119,7 +123,7 @@ const Body = () => {
       </div>
       <div className="mx-32 my-4 grid grid-cols-4 justify-items-center">
         {filteredRestro.map((restro) => (
-          <Link to={"/restaurant/" + restro.data.id} key={restro.data.id}>
+          <Link to={"/restaurant/" + restro.info.id} key={restro.info.id}>
             <RestaurantCard restroData={restro} />
           </Link>
         ))}
