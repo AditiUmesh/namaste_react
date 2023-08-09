@@ -9,10 +9,11 @@ import {
   useRouteError,
   Outlet,
 } from "react-router-dom";
-import AboutUs from "./src/components/AboutUs";
+import About from "./src/components/About";
 import Error from "./src/components/Error";
 import Contact from "./src/components/Contact";
 import RestaurantMenu from "./src/components/RestaurantMenu";
+import Footer from "./src/components/Footer";
 
 const FoodApp = () => {
   return (
@@ -20,6 +21,7 @@ const FoodApp = () => {
       <Header />
       {/**  */}
       <Outlet />
+      <Footer />
     </div>
   );
 };
@@ -36,7 +38,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <AboutUs />,
+        element: <About />,
       },
       {
         path: "/contact",

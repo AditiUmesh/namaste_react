@@ -58,6 +58,8 @@ const RestaurantMenu = () => {
             setShowIndex={() => {
               if (index !== showIndex) {
                 setShowIndex(index);
+              } else {
+                setShowIndex("");
               }
             }}
           />

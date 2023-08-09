@@ -49,21 +49,22 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="mt-5">
-      <div className="p-2 m-2 border-b border-solid shadow-md flex justify-between">
+      <div className="p-2 mt-2 mx-32 flex justify-between">
         <div className="flex justify-center p-4">
           <input
-            className="border border-solid border-black p-2 w-72"
+            className="border border-solid border-gray-400 p-2 w-72"
             type="text"
             placeholder="Search Restaurants here.."
             name="search"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
+              // handleSearchRestro;
               console.log(searchText);
             }}
           ></input>
           <button
-            className="relative p-3 border bg-green-100 border-solid"
+            className="relative p-3 border bg-green-100 border-solid rounded"
             type="submit"
             onClick={handleSearchRestro}
           >

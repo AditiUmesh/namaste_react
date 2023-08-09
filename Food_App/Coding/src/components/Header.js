@@ -22,7 +22,9 @@ const Header = () => {
           <li className="p-2.5 m-2.5">
             <Link to="contact">Contact</Link>
           </li>{" "}
-          <li className="p-2.5 m-2.5">Cart</li>
+          <li className="p-2 m-2.5">
+            <i className="fa fa-shopping-cart"></i>
+          </li>
           <li className="p-2.5 m-2.5">
             <button
               className="login"
