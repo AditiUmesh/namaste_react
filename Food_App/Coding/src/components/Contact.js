@@ -1,10 +1,10 @@
-// import ContactUs from "../../assets/contact-us-image.avif";
+import ContactUs from "../../assets/contact-us-image.jpg";
 
 const Contact = () => {
   return (
     <div className="m-4 p-4 flex flex-wrap justify-evenly">
-      <div className="w-[30%] m-4 p-4 items-center justify-center">
-        {/* <img src={ContactUs}></img> */}
+      <div className="w-[30%] m-4 p-4 flex items-center">
+        <img src={ContactUs}></img>
       </div>
       <div className="text-center justify-center items-center m-3 p-4">
         <div className="font-bold text-4xl m-4 p-4">Contact Us</div>

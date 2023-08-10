@@ -14,15 +14,19 @@ import Error from "./src/components/Error";
 import Contact from "./src/components/Contact";
 import RestaurantMenu from "./src/components/RestaurantMenu";
 import Footer from "./src/components/Footer";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Home from "./src/components/Home";
 
 const FoodApp = () => {
   return (
+    // <Provider store={appStore}>
     <div className="app">
       <Header />
-      {/**  */}
       <Outlet />
       <Footer />
     </div>
+    // </Provider>
   );
 };
 
@@ -36,6 +40,12 @@ const appRouter = createBrowserRouter([
         path: "/",
         element: <Body />,
       },
+
+      {
+        path: "/home",
+        element: <Home />,
+      },
+
       {
         path: "/about",
         element: <About />,

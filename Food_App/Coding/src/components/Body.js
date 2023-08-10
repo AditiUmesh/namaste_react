@@ -8,6 +8,7 @@ const Body = () => {
   const [listOfRestro, setListOfRestro] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [filteredRestro, setFilteredRestro] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
 
   // const PromotedRestaurantCard = withPromotedLabel(RestaurantCard);
 
@@ -36,18 +37,24 @@ const Body = () => {
   // if (listOfRestro.length === 0) {
   // return <Shimmer />;
   // }
-  const handleSearchRestro = () => {
+  const handleSearchRestro = (searchText) => {
     if (searchText === "") return setFilteredRestro(listOfRestro);
     const searchRestro = listOfRestro.filter((restro) =>
       restro.info.name.toLowerCase().includes(searchText.toLowerCase())
     );
     console.log(searchRestro);
     setFilteredRestro(searchRestro);
+    if (searchRestro?.length === 0) {
+      setErrorMessage(
+        `Sorry, we couldn't find any results for "${searchText}"`
+      );
+    }
   };
 
   return listOfRestro.length === 0 ? (
     <Shimmer />
   ) : (
+    // {errorMessage && <div className="text-center">{errorMessage}</div>}
     <div className="mt-5">
       <div className="p-2 mt-2 mx-32 flex justify-between">
         <div className="flex justify-center p-4">
@@ -59,18 +66,21 @@ const Body = () => {
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
-              // handleSearchRestro;
+              handleSearchRestro(e.target.value);
               console.log(searchText);
             }}
           ></input>
           <button
             className="relative p-3 border bg-green-100 border-solid rounded"
             type="submit"
-            onClick={handleSearchRestro}
+            onClick={() => {
+              handleSearchRestro(searchText);
+            }}
           >
             <i className="fa fa-search"></i>
           </button>
         </div>
+
         <div className="p-2 m-2 flex justify-end">
           <button
             className="py-2 px-3 m-2 border border-solid border-{#c7c8cf} rounded-full"
