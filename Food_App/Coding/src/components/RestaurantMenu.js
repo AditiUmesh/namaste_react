@@ -31,7 +31,7 @@ const RestaurantMenu = () => {
     <div className="mx-[270px] my-[25px] pt-2">
       <div className="flex flex-wrap justify-between justify-items-center mx-5 mb-5 pb-4 border-b-[1px] border-dashed border-[#7e808c]">
         <div className="restro-heading">
-          <div className="inline-block mr-4 w-[600px]">
+          <div className="inline-block mr-4 w-[500px]">
             <p className="font-serif font-semibold text-3xl text-[#282828] capitalize mb-2">
               {name}
             </p>
