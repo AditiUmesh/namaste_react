@@ -17,6 +17,7 @@ import Footer from "./src/components/Footer";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Home from "./src/components/Home";
+import Login from "./src/components/login";
 
 const FoodApp = () => {
   return (
@@ -53,6 +54,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
       {
         path: "/restaurant/:resId",

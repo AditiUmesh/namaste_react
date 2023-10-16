@@ -32,7 +32,7 @@ const Header = () => {
             </svg>
           </li>
           <li className="p-2.5 m-2.5">
-            <button
+            {/* <button
               className="login"
               onClick={() => {
                 btnName === "Login"
@@ -41,7 +41,8 @@ const Header = () => {
               }}
             >
               {btnName}
-            </button>
+            </button> */}
+             <Link to="login">Login</Link> 
           </li>
         </ul>
       </div>
