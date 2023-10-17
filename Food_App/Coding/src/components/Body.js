@@ -1,7 +1,7 @@
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
-import { FOODAPPRL } from "../../utils/constant";
+import { FOODAPPRL } from "../utils/constant";
 import { Link } from "react-router-dom";
 
 const Body = () => {

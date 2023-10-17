@@ -15,19 +15,20 @@ import Contact from "./src/components/Contact";
 import RestaurantMenu from "./src/components/RestaurantMenu";
 import Footer from "./src/components/Footer";
 import { Provider } from "react-redux";
-import appStore from "./utils/appStore";
+import appStore from "./src/utils/appStore";
 import Home from "./src/components/Home";
-import Login from "./src/components/login";
+import Login from "./src/components/Login";
+import Cart from "./src/components/Cart";
 
 const FoodApp = () => {
   return (
-    // <Provider store={appStore}>
+    <Provider store={appStore}>
     <div className="app">
       <Header />
       <Outlet />
       <Footer />
     </div>
-    // </Provider>
+    </Provider>
   );
 };
 
@@ -63,6 +64,10 @@ const appRouter = createBrowserRouter([
         path: "/restaurant/:resId",
         element: <RestaurantMenu />,
       },
+      {
+        path: "/cart",
+        element: <Cart/>
+      }
     ],
   },
 ]);

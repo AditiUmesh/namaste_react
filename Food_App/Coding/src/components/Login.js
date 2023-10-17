@@ -79,8 +79,8 @@ import * as Yup from 'yup';
 
 const Login = () => {
     return(
-    <div className="m-5">
-        <h1>Login</h1>
+    <div className="m-5 p-5">
+        <div className="text-center text-lg font-bold">Login</div>
         <Formik
         initialValues= {{ name: "", email: "", phoneNumber: "" }}
         validationSchema= {Yup.object({
@@ -96,7 +96,7 @@ const Login = () => {
           }}
         >
             {formik => (
-                <form onSubmit={formik.handleSubmit}>
+                <form className="m-5" onSubmit={formik.handleSubmit}>
                 <label htmlFor="name">Name
                 </label>
                 <Field id="name" name="name" type="name" 
