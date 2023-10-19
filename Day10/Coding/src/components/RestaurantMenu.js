@@ -49,7 +49,7 @@ const RestaurantMenu = () => {
         <div>
           {itemCards?.map((items) => (
             <div
-              className="mt-5 pb-4 flex justify-between justify-items-center border-b-[1px] order-solid border-[#7e808c]"
+              className="mt-5 pb-4 flex justify-between justify-items-center border-b-[1px] border-solid border-[#7e808c]"
               key={items.card.info.id}
             >
               <div className="pt-2">
