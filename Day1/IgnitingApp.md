@@ -36,7 +36,7 @@
 
 # 5. What is difference between 'dependencies' vs 'devDependencies'?
 
-    dependency: packages that are needed for apllication to work in production
+    dependency: packages that are needed for application to work in production
     devDependency: packages that are only needed in local development or testing
 
 # 6. What is Tree Shaking?
@@ -99,7 +99,7 @@
     The dist folder is automatically generated while building the project.
     It stores the compiled version of the code.
 
-    There are two folders src folder and dist folder. They are used to store the source code and compiled code respectively. The src folder is where developers write their code and dist is where compiled code is stored. This ensures that the code is kept separate from the comiled version, making it easier to debug and maintain.
+    There are two folders src folder and dist folder. They are used to store the source code and compiled code respectively. The src folder is where developers write their code and dist is where compiled code is stored. This ensures that the code is kept separate from the compiled version, making it easier to debug and maintain.
 
 # 14. What is `browserlists`?
 
