@@ -47,7 +47,7 @@
 
 # Q: What is SPA.
 
-  A Single Page Application is a we application or website that interacts with the web browser by dynamically rewriting the current web page with new data from the web server, instead of reloading of the browser for new pages.
+  A Single Page Application is a web application or website that interacts with the web browser by dynamically rewriting the current web page with new data from the web server, instead of reloading of the browser for new pages.
 
 
 # Q: What is difference between Client Side Routing and Server Side Routing?
