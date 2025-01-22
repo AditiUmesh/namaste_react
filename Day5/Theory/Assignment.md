@@ -36,7 +36,7 @@
     React provides a bunch of standard in-built hooks:
     useState: To manage states. Returns a stateful value and an updater function to update it.
     useEffect: To manage side-effects like API calls, subscriptions, timers, mutations and more
-    useContext: to return current value for a context
+    useContext: creates shared data accessible by components in a hierarchy without passing props through each level.
     useReducer: A useState alternative to help with complex state management 
     useCallback: it returns a memoized version of a callback to help a child component not re-render unnecessarily
     useMemo: it returns a memoized value that helps in performance optimizations.
