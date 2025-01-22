@@ -4,7 +4,7 @@
   A microservice architecture is a type of application architecture where the application is developed as a collection of services. It provides the framework to develop, deploy, and maintain microservices architecture diagrams and services independently.
 
 # Q. What is monolith architecture
-  Monolith means composed all in one piece. The monolith application descries a single-tiered software application in which different components combined into single program from a single platform.
+  Monolith means composed all in one piece. The monolith application describes a single-tiered software application in which different components combined into single program from a single platform.
   Components can be: authorization, database,UI,notification
 
 # Q. What is the difference between monolith and microservice
